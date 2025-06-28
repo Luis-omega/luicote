@@ -1,0 +1,28 @@
+#! /bin/zsh
+
+name="$1"
+
+function exit_if_null(){
+if [[ -z "$1" ]] then echo "$2"; exit -1; fi
+}
+
+#exit_if_null "$dir" "no directory path provided"
+exit_if_null "$name" "no project name provided"
+
+dir="$HOME/projects"
+
+current=$(pwd)
+
+cd "$HOME/projects/luicote"
+source .env/bin/activate
+error_output=$(python main.py --output-dir "$dir" --folder-name "$name" 2>&1)
+st="$?"
+if [ $st -eq 0 ]; then
+  mv "$dir/$name/folder_name.cabal" "$dir/$name/$name.cabal"
+  cd "$dir/$name"
+  git init 
+  git add .
+  git commit -m "$name initialization"
+  echo "$dir"
+fi
+
