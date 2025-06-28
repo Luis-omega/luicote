@@ -1,0 +1,2 @@
+[console_scripts]
+luicote = luicote:main

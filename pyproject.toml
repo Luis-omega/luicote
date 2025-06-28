@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "luicote"
+version = "0.0.1"
+dependencies = [
+  "jinja2",
+]
+authors = [
+  {name = "Luis Alberto Díaz Díaz", email = "73986926+Luis-omega@users.noreply.github.com"},
+]
+maintainers = [
+  {name = "Luis Alberto Díaz Díaz", email = "73986926+Luis-omega@users.noreply.github.com"},
+]
+readme = "Readme.md"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["template"]
+
+[project.scripts]
+luicote = "luicote.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["luicote"]
+

@@ -1,0 +1,11 @@
+LICENSE
+Readme.md
+pyproject.toml
+src/luicote/__init__.py
+src/luicote/main.py
+src/luicote.egg-info/PKG-INFO
+src/luicote.egg-info/SOURCES.txt
+src/luicote.egg-info/dependency_links.txt
+src/luicote.egg-info/entry_points.txt
+src/luicote.egg-info/requires.txt
+src/luicote.egg-info/top_level.txt
