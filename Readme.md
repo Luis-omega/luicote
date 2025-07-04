@@ -23,4 +23,4 @@ luicote project_name
 ```
 
 
-And you will get a new Haskell project under "$HOME/project/project_name"
+And you will get a new Haskell project under "$HOME/projects/project_name"
